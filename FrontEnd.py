@@ -20,7 +20,7 @@ def load_count_vector():
 
 st.title("Welcome to Text Sentiment Analysis")
 
-st.write("Understand the emotions behind text with the click of a button. Analyze written content to gauge whether it's positive, negative, or neutral in sentiment.")
+st.write("Understand the emotions behind text by writing in this text box. Analyze written content to gauge whether it's positive, negative, or neutral in sentiment.")
 
 if 'counter' not in st.session_state:
     st.session_state.counter = 0
