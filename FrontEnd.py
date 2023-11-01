@@ -50,12 +50,7 @@ if user_input:
     if user_input.lower() == 'oye papaji':
         st.image("gogi.jpg", caption="Optional image caption")
         st.write("**Balle Balle**")
-        st.markdown(f"""
-    <audio autoplay controls="false">
-      <source src="Audio/oye_papaji.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
-    """)  
+        st.audio('Audio\oye_papaji.mp3', format="audio/mp3")
         
     # Make predictions using the loaded model
     res = vect.transform([user_input])
