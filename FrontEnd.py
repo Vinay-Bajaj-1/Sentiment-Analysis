@@ -32,7 +32,7 @@ if 'counter' not in st.session_state:
 st.session_state.counter += 1
 
 # Display the counter in the top right corner
-st.markdown(f'<div style="position: fixed; top: 10px; right: 10px; background-color: #e0e0e0; padding: 10px; border-radius: 5px;">Visits: {st.session_state.counter}</div>', unsafe_allow_html=True)
+st.markdown(f'<div style="position: fixed; top: 20px; right: 20px; background-color: #e0e0e0; padding: 10px; border-radius: 5px;">Visits: {st.session_state.counter}</div>', unsafe_allow_html=True)
 
 
 
