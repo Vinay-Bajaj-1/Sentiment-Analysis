@@ -50,7 +50,7 @@ if user_input:
     if user_input.lower() == 'oye papaji':
         st.image("gogi.jpg", caption="Optional image caption")
         st.write("**Balle Balle**")
-        st.audio('Audio\oye_papaji.mp3', format="audio/mp3")
+        st.audio('Audio/oye_papaji.mp3', format="audio/mp3")
         
     # Make predictions using the loaded model
     res = vect.transform([user_input])
