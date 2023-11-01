@@ -23,6 +23,19 @@ st.title("Welcome to Text Sentiment Analysis")
 st.write("Understand the emotions behind text with the click of a button. Analyze written content to gauge whether it's positive, negative, or neutral in sentiment.")
 
 
+
+
+if 'counter' not in st.session_state:
+    st.session_state.counter = 0
+
+# Increment the counter whenever the app is rerun
+st.session_state.counter += 1
+
+# Display the counter in the top right corner
+st.markdown(f'<div style="position: fixed; top: 10px; right: 10px; background-color: #e0e0e0; padding: 10px; border-radius: 5px;">Visits: {st.session_state.counter}</div>', unsafe_allow_html=True)
+
+
+
 #function to select and display gif
 def load_image(image_directory):
     image_list = [f for f in os.listdir(image_directory) if f.endswith((".gif"))]
@@ -54,7 +67,7 @@ if user_input:
         
 
     if prediction == 'Positive':
-        directory = "Postive/"
+        directory = "Positive/"
         load_image(directory)
         
     if prediction == 'Negative':
