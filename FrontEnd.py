@@ -29,7 +29,7 @@ user_input = st.text_input("Enter text: ")
 
 if user_input:
     
-    if user_input.str.lower() == 'oye papaji':
+    if user_input.lower() == 'oye papaji':
         st.image("gogi.jpg", caption="Optional image caption")
         st.write("**Extremly Happy**")
         
