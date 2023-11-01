@@ -9,11 +9,11 @@ import streamlit as st
 
 #loading model and count_vector
 def load_svc():
-    loaded_model = joblib.load("C:\\Users\\Vinay\\Sentiment Analysis\\best_svc_model.pkl")
+    loaded_model = joblib.load("best_svc_model.pkl")
     return loaded_model
 
 def load_count_vector():
-    loaded_model = joblib.load("C:\\Users\\Vinay\\Sentiment Analysis\\count_vectorizer.pkl")
+    loaded_model = joblib.load("count_vectorizer.pkl")
     return loaded_model
 
 st.title("Welcome to Text Sentiment Analysis")
@@ -35,12 +35,12 @@ if user_input:
     st.write("Sentiment of Text is :", "**" + str(prediction[0]) + "**")
 
     if prediction == 'Neutral':
-        st.image("C:\\Users\\Vinay\\Sentiment Analysis\\straight.jpg", caption="Optional image caption", use_column_width = False )
+        st.image("straight.jpg", caption="Optional image caption", use_column_width = False )
 
     if prediction == 'Positive':
-        st.image("C:\\Users\\Vinay\\Sentiment Analysis\\smile.png", caption="Optional image caption")
+        st.image("smile.png", caption="Optional image caption")
         
     if prediction == 'Negative':
-        st.image("C:\\Users\\Vinay\\Sentiment Analysis\\angry.png", caption="Optional image caption")
+        st.image("angry.png", caption="Optional image caption")
 
 
