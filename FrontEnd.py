@@ -32,7 +32,7 @@ if user_input:
     if user_input.str.lower() == 'oye papaji':
         st.image("gogi.jpg", caption="Optional image caption")
         st.write("**Extremly Happy**")
-        break
+        
     # Make predictions using the loaded model
     res = vect.transform([user_input])
 
