@@ -27,7 +27,7 @@ st.write("Understand the emotions behind text with the click of a button. Analyz
 def load_image(image_directory):
     image_list = [f for f in os.listdir(image_directory) if f.endswith((".gif"))]
     choice = random.choice(image_list)
-    st.image(image_dir + choice)
+    st.image(image_directory + choice)
 
 # Load the model
 svc_model = load_svc()
