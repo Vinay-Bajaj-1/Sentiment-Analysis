@@ -22,9 +22,6 @@ st.title("Welcome to Text Sentiment Analysis")
 
 st.write("Understand the emotions behind text with the click of a button. Analyze written content to gauge whether it's positive, negative, or neutral in sentiment.")
 
-
-
-
 if 'counter' not in st.session_state:
     st.session_state.counter = 0
 
@@ -53,7 +50,13 @@ if user_input:
     if user_input.lower() == 'oye papaji':
         st.image("gogi.jpg", caption="Optional image caption")
         st.write("**Balle Balle**")
-        st.audio("Audio/oye papa ji.mp3", format="audio/mp3")
+        #st.audio("Audio/oye papa ji.mp3", format="audio/mp3")
+        st.markdown("""
+        <audio autoplay controls="false">
+          <source src="Audio/oye papa ji.mp3" type="audio/mp3">
+          Your browser does not support the audio element.
+        </audio>
+        """)   
         
     # Make predictions using the loaded model
     res = vect.transform([user_input])
@@ -74,6 +77,6 @@ if user_input:
         directory = "Negative/"
         load_image(directory)
    
-        
+    
 
 
