@@ -22,14 +22,6 @@ st.title("Welcome to Text Sentiment Analysis")
 
 st.write("Understand the emotions behind text by writing in this text box. Analyze written content to gauge whether it's positive, negative, or neutral in sentiment.")
 
-if 'counter' not in st.session_state:
-    st.session_state.counter = 0
-
-# Increment the counter whenever the app is rerun
-st.session_state.counter += 1
-
-# Display the counter in the top right corner
-st.markdown(f'<div style="position: fixed; top: 50%; right: 10px; transform: translate(0, -50%); background-color: #e0e0e0; color: black; padding: 10px; border-radius: 5px;">Visits: {st.session_state.counter}</div>', unsafe_allow_html=True)
 
 
 #function to select and display gif
@@ -47,7 +39,7 @@ user_input = st.text_input("Enter text: ")
 
 if user_input:
     
-    if user_input.lower() == 'oye papaji':
+    if 'oye papaji'in user_input.lower():
         st.image("gogi.jpg", caption="Optional image caption")
         st.write("**Balle Balle**")
         st.audio('Audio/oye_papaji.mp3', format="audio/mp3")
@@ -56,7 +48,7 @@ if user_input:
     res = vect.transform([user_input])
 
     prediction = svc_model.predict(res)
-    st.write("Sentiment of Text is :", "**" + str(prediction[0]) + "**")
+    st.write("Sentiment of Text is :", "**" + str(prediction[0]) + "**", {"font-size": "20px"})
 
     if prediction == 'Neutral':
         directory = "Neutral/"
