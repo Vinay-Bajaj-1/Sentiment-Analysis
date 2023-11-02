@@ -49,7 +49,7 @@ if user_input:
 
     prediction = svc_model.predict(res)
     
-    st.markdown("<p style='font-size: 20px;'>Sentiment of Text is : {prediction[0]}</p>", unsafe_allow_html=True)
+    st.markdown(f"<p style='font-size: 20px;'>Sentiment of Text is : {prediction[0]}</p>", unsafe_allow_html=True)
 
     if prediction == 'Neutral':
         directory = "Neutral/"
