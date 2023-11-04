@@ -11,7 +11,7 @@ import os
 
 #loading model and count_vector
 def load_svc():
-    loaded_model = joblib.load("best_svc_model.pkl")
+    loaded_model = joblib.load("best_model.pkl")
     return loaded_model
 
 def load_count_vector():
